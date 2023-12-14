@@ -1,11 +1,18 @@
 import styles from "./homeDescription.module.css";
 
-const HomeDescription = () => {
+type TitlePagePropsType = {
+  title: string;
+  description: string;
+}
+
+const HomeDescription = ({title, description}: TitlePagePropsType) => {
   return (
     <div>
+      <h1 className={styles.title}>
+        {title}
+      </h1>
       <p className={styles.description}>
-        Get started by editing{' '}
-        <code className={styles.code}>pages/index.tsx</code>
+        {description}
       </p>
     </div>
   )

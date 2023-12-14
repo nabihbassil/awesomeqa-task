@@ -1,20 +1,19 @@
 import type { NextPage } from 'next'
-import Head from 'next/head'
 import styles from '../styles/Home.module.css'
 import HomeDescription from "../components/homeDescription";
 import HomeUrls from "../components/homeUrls";
 import HeadComponent from "../components/Head";
 
-const Home: NextPage = () => {
+const Nav: NextPage = () => {
   return (
     <div className={styles.container}>
-      <HeadComponent title={'Learn Nextjs'} metaData={'Learn nextjs by tutorials'} />
+      <HeadComponent title={'Moderator Dashboard'} metaData={'Moderate Discord Messages'} />
       <main className={styles.main}>
-        <HomeDescription />
+        <HomeDescription title={'AwesomeQA'} description={'Moderating Discord, one message at a time'} />
         <HomeUrls />
       </main>
     </div>
   )
 }
 
-export default Home
+export default Nav

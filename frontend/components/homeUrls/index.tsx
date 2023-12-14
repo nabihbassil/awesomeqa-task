@@ -1,39 +1,44 @@
 import styles from "./homeUrls.module.css";
 import Link from 'next/link'
+import {LibraryBooksOutlined, LightbulbOutlined, SupportAgentOutlined} from "@mui/icons-material";
 
-const homeUrls = () => {
+const HomeUrls = () => {
   return (
-    <div className={styles.grid}>
-      <Link href="/about">
+    <div id="mainMenuCard" className={styles.grid}>
+      <Link href="/falsePage">
         <a className={styles.card}>
-          <h2>About &rarr;</h2>
-          <p>About page related information states here.</p>
+        <div className={styles.cardTitle}>
+        <LibraryBooksOutlined fontSize="large" sx={{ mr: 1 }}/>
+          <h2>Knowledge Base</h2>
+          </div>
+          <p>Access information related to moderating</p>
         </a>
       </Link>
 
 
-      <Link href="/blog">
+      <Link href="/tickets">
         <a className={styles.card}>
-          <h2>Blog &rarr;</h2>
-          <p>Blog page. Welcome to our blog</p>
+        <div className={styles.cardTitle}>
+        <LightbulbOutlined fontSize="large" sx={{ mr: 1 }}/>
+          <h2>Tickets</h2>
+          </div>
+          <p>Take a look at channel messages</p>
         </a>
       </Link>
 
-      <Link href="/newsletter">
+      <Link href="/falsePage">
         <a className={styles.card}>
-          <h2>Newsletter &rarr;</h2>
-          <p>Please subsribe our newsletter</p>
+        <div className={styles.cardTitle}>
+        <SupportAgentOutlined fontSize="large" sx={{ mr: 1 }}/>
+          <h2>FAQ Insights</h2>
+          </div>
+          <p>Gain knowledge into common info</p>   
         </a>
       </Link>
+      
 
-      <Link href="/contact">
-        <a className={styles.card}>
-          <h2>Contact &rarr;</h2>
-          <p>Contact page. Please contact us if you have any questions</p>
-        </a>
-      </Link>
     </div>
   )
 }
 
-export default homeUrls;
+export default HomeUrls;
