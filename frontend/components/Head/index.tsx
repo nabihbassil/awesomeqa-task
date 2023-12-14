@@ -10,7 +10,7 @@ const HeadComponent = ({title, metaData}: HeadComponentPropsType) => {
     <Head>
       <title>{title}</title>
       <meta name="description" content={metaData} />
-      <link rel="icon" href="/favicon.ico" />
+      <link rel="icon" href="/CompLogo.ico" />
     </Head>
   )
 }
